@@ -12,12 +12,13 @@ const app = express();
 /* CORS */
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://fullstack-auth-dashboard-ajxn.onrender.com"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 /* body‑parser */
 app.use(express.json());
