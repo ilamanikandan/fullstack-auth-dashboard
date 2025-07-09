@@ -10,10 +10,14 @@ dotenv.config();
 const app = express();
 
 /* CORS */
+import cors from "cors";
+
 app.use(
   cors({
-    origin: "https://fullstack-auth-dashboard-ajxn.onrender.com", // frontend URL
+    origin: "https://fullstack-auth-dashboard-ajxn.onrender.com", // ✅ Your deployed frontend URL
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
